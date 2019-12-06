@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<table class="table mainText" style="display:@ViewBag.DisplayTab">
+    @foreach(var car in ViewBag.CarsAdmin)
+    {
+        <tr>
+            <td>@car.brand.Model</td>        
+            <td>
+                <a href="/Admin/Edit/@car.id" class="btn btn-success">EDIT</a>
+            </td>
+            <td>
+                <a href="/Admin/Delete/@car.id" class="btn btn-danger">DELETE</a>
+            </td>
+            
+        </tr>
+    }
+    <tr>
+        <td colspan="3">
+            <a href="/Admin/Create" class="btn btn-success">CREATE</a>
+        </td>
+    </tr>
+</table>

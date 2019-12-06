@@ -1,0 +1,61 @@
+﻿
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit @ViewBag.EditCar.brand.Model @ViewBag.EditCar.brand.Company: </h2>
+<form action="/Admin/Change/@ViewBag.EditCar.id" method="post">
+    <table class="table">
+        <tr>
+            <td>
+                <label>Year: </label>
+            </td>
+            <td>
+                <input type="text" name="year" value="@ViewBag.EditCar.year" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Price: </label>
+            </td>
+            <td>
+                <input type="text" name="price" value="@ViewBag.EditCar.price" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    <input type="radio" name="available" value="false" /> Unavailable
+                </label>
+            </td>
+            <td>
+                <label>
+                    <input type="radio" name="available" value="true" /> Available
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Mileage: </label>
+            </td>
+            <td>
+                <input type="text" name="mileAge" value="@ViewBag.EditCar.mileAge" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Fuel: </label>
+            </td>
+            <td>
+                <input type="text" name="Fuel" value="@ViewBag.EditCar.Fuel" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" class="btn btn-success" value="EDIT" />
+            </td>
+        </tr>
+    </table>
+    <input hidden value="@ViewBag.EditCar.id" name="id" />
+</form>
+

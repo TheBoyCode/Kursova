@@ -1,0 +1,60 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image: url("../Images/bakc_ground.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+     background-size: 100% 100%;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Override the default bootstrap behavior where horizontal description lists 
+   will truncate terms that are too long to fit in the left column 
+*/
+.dl-horizontal dt {
+    white-space: normal;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+.table{
+    background: rgba(120, 120, 120,0.5);
+}
+.mainText{
+    text-align:center;
+    align-items:center;
+    color:white;
+}
+.mainTextBlack{
+    text-align:center;
+    align-items:center;
+    color: black;
+}
+.smallCars {
+    text-align: center;
+    align-items: center;
+    opacity:0.8;
+}
+.priceText {
+    text-align: center;
+    align-items: center;
+    font-size: 0.5em;
+    color: lightgray;
+}
+row col {
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+table td {
+    text-align: center !important;
+    vertical-align: middle !important;
+}

@@ -1,0 +1,43 @@
+﻿
+
+
+<h2>RENT</h2>
+
+<table class="table">
+    @foreach (var car in ViewBag.Cars)
+     {
+    <tr>
+        <td class="align-middle mainText">
+            <div>
+                <h4><a href="/CarPage/Rent/@car.id" class="mainText">Model: @car.brand.Model</a></h4>
+            </div>
+        </td>
+        <td class="align-middle mainText">
+            <div>
+                @if (@car.available)
+                {
+                    <a href="/CarPage/Rent/@car.id" class="mainText btn btn-danger">RENT</a>
+                }
+                else {
+                    <div class="mainText btn btn-primary">NOT AVAILABLE</div>
+                }
+            </div>
+        </td>
+        <td class="align-middle mainText">
+            <div class="mainText">
+                <h4>@car.price $</h4> / day
+            </div>
+        </td>
+        <td><img src="@car.ImagesPath[0].path" class="Cars" height="100" /></td>
+        <td class="align-middle">
+             @foreach (var img in car.ImagesPath)
+            {
+                if (car.ImagesPath[0].path != @img.path)
+                {
+                    <img src="@img.path" class="Cars smallCars" height="50">
+                }
+            }
+        </td>
+    </tr>
+     }
+</table>

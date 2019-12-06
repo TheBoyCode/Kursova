@@ -1,0 +1,138 @@
+﻿
+@{
+    ViewBag.Title = "LoginForm";
+}
+<table class="table">
+    <tr>
+        <td class="align-middle mainText">
+            <h2 id="login" onclick="logining()" style="color:black;">Login</h2>
+        </td>
+        <td class="align-middle mainText">
+            <h2 id="register" onclick="registering()">Registration</h2>
+        </td>
+    </tr>
+</table>
+<div class="row justify-content-md-center" id="logFrom">
+    <form method="post" action="/Login/PayLog">
+        <div class="container mainText table">
+            <div class="row justify-content-md-center">
+                <div class="col">
+                   <h4><label name="Login">Login/Email:</label></h4>
+                </div>
+                <div class="col">
+                    <input type="text" name="Login" style="color:black;"/>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col">
+                    <h4><label name="Password">Password:</label></h4>
+                </div>
+                <div class="col">
+                    <input type="password" name="Password" style="color:black;" />
+                </div>
+                <br />
+                <input type="text" name="RentedCar_id" hidden value="@ViewBag.Car.id"/>
+                <div class="col">
+                    <h4><label class="mainText">@ViewBag.Car.brand.Company @ViewBag.Car.brand.Model : @ViewBag.Car.price $</label></h4>
+                    <input class="btn btn-danger" type="submit" value="Submit and Rent" />
+                </div>
+                <br />
+            </div>
+        </div>
+    </form>
+</div>
+
+<form id="regFrom" style="display:none;" method="post" action="/Login/Registration">
+    <table class="table">
+        <tr>
+            <td class="mainText">
+                <label name="login">Login:</label>
+            </td>
+            <td class="mainText">
+                <input type="text" name="login" style="color:black;"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="mainText">
+                <label name="password">Password:</label>
+            </td>
+            <td class="mainText">
+                <input type="text" name="password" style="color:black;"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="mainText">
+                <label name="name">First Name:</label>
+            </td>
+            <td class="mainText">
+                <input type="text" name="name" style="color:black;"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="mainText">
+                <label name="lastname">Last Name:</label>
+            </td>
+            <td class="mainText">
+                <input type="text" name="lastname" style="color:black;"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="mainText">
+                <label name="license">Driver license:</label>
+            </td>
+            <td class="mainText">
+                <input type="text" name="license" style="color:black;"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="mainText">
+                <label name="cardNum">Card number:</label>
+            </td>
+            <td class="mainText">
+                <input type="text" name="cardNum" style="color:black;"/>
+            </td>
+        </tr>
+        <tr>
+            <td class="mainText">
+                <label name="cardExp">Card expired:</label>
+            </td>
+            <td class="mainText">
+                <input type="text" name="cardExp" style="color:black;"/>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td class="mainText" colspan="2">
+                <input type="submit" class="btn btn-danger" value="Go!" />
+            </td>
+        </tr>
+    </table>
+    <input type="text" name="RentedCar_id" hidden value="@ViewBag.Car.id" />
+</form>
+
+<script>
+    function logining() {
+        var reg = document.getElementById("regFrom");
+        var log = document.getElementById("logFrom");
+        var login = document.getElementById("login");
+        var register = document.getElementById("register");
+        reg.style.display = "none";
+        log.style.display = "block";
+        login.style.color = "black";
+        register.style.color = "white";
+
+    }
+    function registering() {
+        var reg = document.getElementById("regFrom");
+        var log = document.getElementById("logFrom");
+        var login = document.getElementById("login");
+        var register = document.getElementById("register");
+        log.style.display = "none";
+        reg.style.display = "block";
+        register.style.color = "black";
+        login.style.color = "white";
+    }
+</script>

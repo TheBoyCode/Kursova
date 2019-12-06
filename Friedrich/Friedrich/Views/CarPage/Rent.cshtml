@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Car : @ViewBag.Car.brand.Model @ViewBag.Car.brand.Company </h2>
+<div class="row text-center">
+    <div class="col">
+        <img src="@ViewBag.Car.ImagesPath[0].path" height="400"/>
+    </div>
+</div>
+<table class="table">
+    <tr>
+        <td class="mainText">
+            Year:
+        </td>
+        <td class="mainText">
+            @ViewBag.Car.year
+        </td>
+    </tr>
+    <tr>
+        <td class="mainText">
+            Mileage:
+        </td>
+        <td class="mainText">
+            @ViewBag.Car.mileAge
+        </td>
+    </tr>
+    <tr>
+        <td class="mainText">
+            Fuel:
+        </td>
+        <td class="mainText">
+            @ViewBag.Car.Fuel
+        </td>
+    </tr>
+    <tr>
+        <td class="mainText">
+            Price:
+        </td>
+        <td class="mainText">
+            @ViewBag.Car.price $ /day
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2">
+            @if (ViewBag.Car.available)
+            {
+                <a href="/Login/Pay/@ViewBag.Car.id" class="btn btn-danger mainText">
+                    RENT NOW
+                </a>
+            }
+        </td>
+    </tr>
+</table>
+
+
+

@@ -1,0 +1,85 @@
+﻿
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+<form action="/Admin/Insert" method="post">
+    <table class="table">
+        <tr>
+            <td>
+                <label>Model: </label>
+            </td>
+            <td>
+                <input type="text" name="brand.Model" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Company: </label>
+            </td>
+            <td>
+                <input type="text" name="brand.Company" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Year: </label>
+            </td>
+            <td>
+                <input type="text" name="year" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Price: </label>
+            </td>
+            <td>
+                <input type="text" name="price" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    <input type="radio" name="available" value="false" /> Unavailable
+                </label>
+            </td>
+            <td>
+                <label>
+                    <input type="radio" name="available" value="true" /> Available
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Mileage: </label>
+            </td>
+            <td>
+                <input type="text" name="mileAge" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Fuel: </label>
+            </td>
+            <td>
+                <input type="text" name="Fuel" />
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <label>Path IMG (;) IMPORTANT*: </label>
+            </td>
+            <td>
+                <input type="text" name="path" />
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="submit" class="btn btn-success" value="CREATE" />
+            </td>
+        </tr>
+    </table>
+    
+</form>
+

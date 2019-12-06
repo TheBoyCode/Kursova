@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row justify-content-md-center" id="logFrom">
+    <form method="post" action="/Admin/Panel">
+        <div class="container mainText table" style="color:black;">
+            <div class="row justify-content-md-center">
+                <div class="col">
+                    <h4><label name="Login">Login/Email:</label></h4>
+                </div>
+                <div class="col">
+                    <input type="text" name="Login" />
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col">
+                    <h4><label name="Password">Password:</label></h4>
+                </div>
+                <div class="col">
+                    <input type="password" name="Password" />
+                </div>
+                <br />
+                <div class="col">
+                    <input class="btn btn-danger" type="submit" value="GO" />
+                </div>
+                <br />
+            </div>
+        </div>
+    </form>
+</div>
+
